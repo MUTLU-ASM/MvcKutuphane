@@ -11,12 +11,19 @@ namespace MvcKutuphane.Models.Entitiy
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class personel
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public personel()
+        {
+            this.hareket = new HashSet<hareket>();
+        }
+    
         public byte id { get; set; }
-        [Required(ErrorMessage ="Personel Adý Boþ Geçilemez")]
-        public string personel1 { get; set; }
+        public string personelad1 { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<hareket> hareket { get; set; }
     }
 }

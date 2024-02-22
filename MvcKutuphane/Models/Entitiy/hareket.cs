@@ -23,7 +23,7 @@ namespace MvcKutuphane.Models.Entitiy
         public int id { get; set; }
         public Nullable<int> kitap { get; set; }
         public Nullable<int> uye { get; set; }
-        public Nullable<int> personel { get; set; }
+        public Nullable<byte> personel { get; set; }
         public Nullable<System.DateTime> alisTarih { get; set; }
         public Nullable<System.DateTime> iadeTarih { get; set; }
     
@@ -31,5 +31,6 @@ namespace MvcKutuphane.Models.Entitiy
         public virtual ICollection<ceza> ceza { get; set; }
         public virtual kitap kitap1 { get; set; }
         public virtual uye uye1 { get; set; }
+        public virtual personel personel1 { get; set; }
     }
 }

@@ -47,7 +47,7 @@ namespace MvcKutuphane.Controllers
         public ActionResult PersonelGuncelle(personel p)
         {
             var prs = db.personel.Find(p.id);
-            prs.personel1 = p.personel1;
+            prs.personelad1 = p.personelad1;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
